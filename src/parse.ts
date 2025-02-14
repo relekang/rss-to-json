@@ -5,7 +5,10 @@ export default async (url: string, config?: AxiosRequestConfig) => {
     if (!/(^http(s?):\/\/[^\s$.?#].[^\s]*)/i.test(url)) return null;
 
     const { data } = await axios(url, config);
+    return parseFromString(data);
+};
 
+export const parseFromString = async (data: string) => {
     const xml = new XMLParser({
         attributeNamePrefix: '',
         textNodeName: '$text',

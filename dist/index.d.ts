@@ -1,4 +1,4 @@
-import parse from "./parse";
+import parse, { parseFromString } from './parse';
 declare const Parse: (url: string, config?: import("axios").AxiosRequestConfig<any>) => Promise<{
     title: any;
     description: any;
@@ -8,4 +8,4 @@ declare const Parse: (url: string, config?: import("axios").AxiosRequestConfig<a
     items: any[];
 }>;
 export default parse;
-export { parse, Parse };
+export { parse, Parse, parseFromString };

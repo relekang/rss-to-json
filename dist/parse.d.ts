@@ -8,3 +8,11 @@ declare const _default: (url: string, config?: AxiosRequestConfig) => Promise<{
     items: any[];
 }>;
 export default _default;
+export declare const parseFromString: (data: string) => Promise<{
+    title: any;
+    description: any;
+    link: any;
+    image: any;
+    category: any;
+    items: any[];
+}>;
